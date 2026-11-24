@@ -56,10 +56,10 @@ to more than one ice-flow phase, whereas a single ice-flow direction typically g
 
 ```
 README.md
-scripts/
+Scripts/
     orientation_analysis.py        standalone version (geopandas)
     orientation_analysis_qgis.py   runs inside the QGIS Python Console, no installation needed
-data/
+Data/
     features.gpkg                  digitized linear features (EPSG:32617)
 results/
     summary.csv                    circular statistics, overall and per type
@@ -72,18 +72,18 @@ figures/
 
 ## How to run
 
-**Inside QGIS (no installation):** load `data/features.gpkg`, open *Plugins → Python Console*,
+**Inside QGIS (no installation):** load `Data/features.gpkg`, open *Plugins → Python Console*,
 and run:
 
 ```python
-exec(open(r"path/to/scripts/orientation_analysis_qgis.py", encoding="utf-8").read())
+exec(open(r"path/to/Scripts/orientation_analysis_qgis.py", encoding="utf-8").read())
 ```
 
 **Standalone Python:**
 
 ```bash
 pip install geopandas matplotlib
-python scripts/orientation_analysis.py data/features.gpkg --layer linear_features --out results
+python Scripts/orientation_analysis.py Data/features.gpkg --layer linear_features --out results
 ```
 
 ## Reference
